@@ -6,6 +6,12 @@ use Record\Model\RecordModel;
 use System\Service\BaseService;
 
 class RecordService extends BaseService {
+    /**
+     *  创建记录
+     *
+     * @param Record $record 记录对象
+     * @return array
+     */
     static function createRrcord(Record $record) {
         //获取上一条合法的record id
         $where['status'] = RecordModel::STATUS_VAILD;
@@ -38,6 +44,12 @@ class RecordService extends BaseService {
         return self::createReturn(false, null, '操作失败');
     }
 
+    /**
+     * 获取当前 to（记录流入者）余额
+     *
+     * @param Record $record
+     * @return array
+     */
     static function getBalance(Record $record) {
         $where = [
             'to' => $record->getTo(),
