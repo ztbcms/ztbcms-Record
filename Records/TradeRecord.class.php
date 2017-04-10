@@ -6,9 +6,9 @@ use Record\Libs\Record;
 class TradeRecord extends Record {
     public $table_name = 'RecordTrade';
 
-    public function __construct($userid, $type, $record_no) {
-        $this->setUserid($userid);
-        $this->setType($type);
-        $this->setRecordNo($record_no);
+    public function __construct($to, $target_type, $target) {
+        $this->setTo($to);
+        $this->setTargetType($target_type);
+        $this->setTarget($target);
     }
 }

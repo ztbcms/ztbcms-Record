@@ -4,29 +4,144 @@ namespace Record\Libs;
 abstract class Record {
     public $table_name = 'RecordTrade';
 
-    protected $userid = 0;
-    protected $user_type = 'member';
+    protected $to = 0;
+    protected $to_type = 'member';
+    protected $from = 0;
+    protected $from_type = 'member';
+    protected $target = 0;
+    protected $target_type = '';
     protected $income = 0;
-    protected $pay = 0;
+    protected $pay = '';
     protected $balance = 0;
-    protected $type = '';
-    protected $record_no = 0;
     protected $detail = '';
-    protected $status = 0;
+    protected $status = '';
     protected $remark = '';
+
+    /**
+     * @param int $to
+     */
+    public function setTo($to) {
+        $this->to = $to;
+    }
+
+    /**
+     * @param string $to_type
+     */
+    public function setToType($to_type) {
+        $this->to_type = $to_type;
+    }
+
+    /**
+     * @param int $from
+     */
+    public function setFrom($from) {
+        $this->from = $from;
+    }
+
+    /**
+     * @param string $from_type
+     */
+    public function setFromType($from_type) {
+        $this->from_type = $from_type;
+    }
+
+    /**
+     * @param int $target
+     */
+    public function setTarget($target) {
+        $this->target = $target;
+    }
+
+    /**
+     * @param string $target_type
+     */
+    public function setTargetType($target_type) {
+        $this->target_type = $target_type;
+    }
+
+    /**
+     * @param int $income
+     */
+    public function setIncome($income) {
+        $this->income = $income;
+    }
+
+    /**
+     * @param string $pay
+     */
+    public function setPay($pay) {
+        $this->pay = $pay;
+    }
+
+    /**
+     * @param int $balance
+     */
+    public function setBalance($balance) {
+        $this->balance = $balance;
+    }
+
+    /**
+     * @param string $detail
+     */
+    public function setDetail($detail) {
+        $this->detail = $detail;
+    }
+
+    /**
+     * @param string $status
+     */
+    public function setStatus($status) {
+        $this->status = $status;
+    }
+
+    /**
+     * @param string $remark
+     */
+    public function setRemark($remark) {
+        $this->remark = $remark;
+    }
+
 
     /**
      * @return int
      */
-    public function getUserid() {
-        return $this->userid;
+    public function getTo() {
+        return $this->to;
     }
 
     /**
      * @return string
      */
-    public function getUserType() {
-        return $this->user_type;
+    public function getToType() {
+        return $this->to_type;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFrom() {
+        return $this->from;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFromType() {
+        return $this->from_type;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTarget() {
+        return $this->target;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTargetType() {
+        return $this->target_type;
     }
 
     /**
@@ -37,7 +152,7 @@ abstract class Record {
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getPay() {
         return $this->pay;
@@ -53,26 +168,12 @@ abstract class Record {
     /**
      * @return string
      */
-    public function getType() {
-        return $this->type;
-    }
-
-    /**
-     * @return int
-     */
-    public function getRecordNo() {
-        return $this->record_no;
-    }
-
-    /**
-     * @return string
-     */
     public function getDetail() {
         return $this->detail;
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getStatus() {
         return $this->status;
@@ -83,77 +184,6 @@ abstract class Record {
      */
     public function getRemark() {
         return $this->remark;
-    }
-
-
-    /**
-     * @param int $userid
-     */
-    public function setUserid($userid) {
-        $this->userid = $userid;
-    }
-
-    /**
-     * @param string $user_type
-     */
-    public function setUserType($user_type) {
-        $this->user_type = $user_type;
-    }
-
-    /**
-     * @param int $income
-     */
-    public function setIncome($income) {
-        $this->income = $income;
-    }
-
-    /**
-     * @param int $pay
-     */
-    public function setPay($pay) {
-        $this->pay = $pay;
-    }
-
-    /**
-     * @param int $balance
-     */
-    public function setBalance($balance) {
-        $this->balance = $balance;
-    }
-
-    /**
-     * @param string $type
-     */
-    public function setType($type) {
-        $this->type = $type;
-    }
-
-    /**
-     * @param int $record_no
-     */
-    public function setRecordNo($record_no) {
-        $this->record_no = $record_no;
-    }
-
-    /**
-     * @param string $detail
-     */
-    public function setDetail($detail) {
-        $this->detail = $detail;
-    }
-
-    /**
-     * @param int $status
-     */
-    public function setStatus($status) {
-        $this->status = $status;
-    }
-
-    /**
-     * @param string $remark
-     */
-    public function setRemark($remark) {
-        $this->remark = $remark;
     }
 
 

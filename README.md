@@ -10,13 +10,29 @@
     - int
     - 上一条记录id，方便排除错误记录
 
-- userid
-    - 所属用户id
-    - int
-
-- user_type
-    - 所属用户类型：默认是member
+- to
+    - 记录流入者
     - varchar
+
+- to_type
+    - 记录流入者者类型
+    - varchar
+    
+- from
+    - 记录流出者
+    - varchar
+
+- from_type
+    - 记录流出者类型
+    - varchar
+    
+- target
+    - 记录来源者
+    - varchar(255)
+
+- target_type
+    - 记录来源者类型
+    - varchar(255)
 
 - income
     - 收入
@@ -29,14 +45,6 @@
 - balance
     - 余额
     - float
-
-- type
-    - 记录类型：比如wxpay , buy_goods
-    - varchar(255)
-
-- record_no
-    - 记录凭证，wxpay的out_trade_on，buy_goods的oder_id【ps 通过type和record 可以找到产生记录的源头】
-    - varchar(255)
 
 - detail
     - 记录详情

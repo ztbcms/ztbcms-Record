@@ -6,16 +6,16 @@ use Record\Records\IntegralRecord;
 
 class IntegralRecordService extends RecordService {
     static function createIntegralRecord(
-        $userid,
-        $type,
-        $record_no,
+        $to,
+        $target_type,
+        $target,
         $income = 0,
         $pay = 0,
         $status = RecordModel::STATUS_VAILD,
         $detail = '',
         $remark = ''
     ) {
-        $recored = new IntegralRecord($userid, $type, $record_no);
+        $recored = new IntegralRecord($to, $target_type, $target);
         $recored->setIncome($income);
         $recored->setPay($pay);
         $recored->setStatus($status);
