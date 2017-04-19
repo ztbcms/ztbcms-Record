@@ -89,8 +89,8 @@
         </div>
     </form>
 </div>
-<script src="{$config_siteurl}statics/js/common.js?v"></script>
-<script src="//cdn.bootcss.com/vue/2.2.6/vue.js"></script>
+<script src="{$config_siteurl}statics/js/common.js"></script>
+<script src="{$config_siteurl}statics/js/vue/vue.js"></script>
 <script>
     $(document).ready(function () {
         new Vue({
