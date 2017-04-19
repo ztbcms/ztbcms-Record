@@ -129,18 +129,17 @@
                         where: this.where
                     }
                     $.ajax({
-                        url: "{:U('index')}",
+                        url: "{:U('Record/Record/lists')}",
                         data: where,
                         dataType: 'json',
-                        type: 'get',
+                        type: 'post',
                         success: function (res) {
-                            console.log(res)
-                            var data = res.info
-                            that.lists = data.lists
-                            that.page = data.page
-                            that.temp_page = data.page
-                            that.limit = data.limit
-                            that.page_count = data.page_count
+                            var data = res.data;
+                            that.lists = data.lists;
+                            that.page = data.page;
+                            that.temp_page = data.page;
+                            that.limit = data.limit;
+                            that.page_count = data.page_count;
                         }
                     })
                 },
