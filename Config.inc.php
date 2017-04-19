@@ -9,7 +9,7 @@ return array(
     //图标
     'icon' => 'https://dn-coding-net-production-pp.qbox.me/e57af720-f26c-4f3b-90b9-88241b680b7b.png',
     //模块简介
-    'introduce' => '一些常规的交易记录和积分记录模块',
+    'introduce' => '常规的交易记录和积分记录实现',
     //模块介绍地址
     'address' => 'https://github.com/ztbcms/ztbcms-Record',
     //模块作者
