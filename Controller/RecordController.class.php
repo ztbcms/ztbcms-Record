@@ -1,4 +1,5 @@
 <?php
+
 namespace Record\Controller;
 
 use Common\Controller\AdminBase;
@@ -16,7 +17,7 @@ class RecordController extends AdminBase {
                 }
             }
 
-            $order = 'id';
+            $order = 'id DESC';
             $page = I('page', 1);
             $limit = I('limit', 20);
             $lists = M($tabName)->where($where)->order($order)->page($page, $limit)->select();
@@ -31,7 +32,7 @@ class RecordController extends AdminBase {
 
             return $this->success($data);
         }
-        $this->assign('tabName',$tabName);
+        $this->assign('tabName', $tabName);
         $this->display();
     }
 
