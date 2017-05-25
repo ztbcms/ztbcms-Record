@@ -11,10 +11,10 @@ abstract class Record {
     protected $target = 0;
     protected $target_type = '';
     protected $income = 0;
-    protected $pay = '';
+    protected $pay = 0;
     protected $balance = 0;
     protected $detail = '';
-    protected $status = '';
+    protected $status = 0;
     protected $remark = '';
 
     /**
