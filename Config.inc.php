@@ -11,7 +11,7 @@ return array(
     //模块简介
     'introduce' => '常规的交易记录和积分记录实现',
     //模块介绍地址
-    'address' => 'https://github.com/ztbcms/ztbcms-Record',
+    'address' => 'http://doc.ztbcms.com/module/record/',
     //模块作者
     'author' => 'zhlhuang',
     //作者地址
