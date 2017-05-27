@@ -13,7 +13,7 @@ return array(
         //名称
         "name" => "记录",
         //备注
-        "remark" => "商城相关操作",
+        "remark" => "",
         //子菜单列表
         "child" => array(
             array(
