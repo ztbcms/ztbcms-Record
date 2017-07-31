@@ -19,6 +19,9 @@ CREATE TABLE `cms_record_trade` (
   `create_time` int(11) NOT NULL DEFAULT '0' COMMENT '创建时间戳',
   `update_time` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间戳',
   `remark` varchar(255) NOT NULL DEFAULT '' COMMENT '备注信息',
+  `to_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录流入者名称',
+  `from_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录流出者名称',
+  `target_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录来源名称',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- ----------------------------
@@ -42,5 +45,8 @@ CREATE TABLE `cms_record_integral` (
   `create_time` int(11) NOT NULL DEFAULT '0' COMMENT '创建时间戳',
   `update_time` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间戳',
   `remark` varchar(255) NOT NULL DEFAULT '' COMMENT '备注信息',
+  `to_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录流入者名称',
+  `from_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录流出者名称',
+  `target_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录来源名称',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

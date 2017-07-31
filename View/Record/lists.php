@@ -36,7 +36,6 @@
                     <td width="100" align="center">支出</td>
                     <td width="100" align="center">余额</td>
                     <td width="140" align="center">创建时间</td>
-                    <td width="140" align="center">更新时间</td>
                     <td width="100" align="center">状态</td>
                 </tr>
                 </thead>
@@ -45,17 +44,17 @@
                         {{ item.id }}
                     </td>
                     <td align="center">
-                        {{ item.target }}
+                        {{ item.target_name }}
                         <p>{{ item.target_type }}</p>
                     </td>
                     <td align="center">
-                        {{ item.from }}
+                        {{ item.from_name }}
                         <p>
                             {{ item.from_type }}
                         </p>
                     </td>
                     <td align="center">
-                        {{ item.to }}
+                        {{ item.to_name }}
                         <p>
                             {{ item.to_type }}
                         </p>
@@ -66,9 +65,6 @@
                     <td align="center">{{ item.balance }}</td>
                     <td align="center">
                         <p>{{ item.create_time | getFormatTime }}</p>
-                    </td>
-                    <td align="center">
-                        <p>{{ item.update_time | getFormatTime }}</p>
                     </td>
                     <td align="center" v-html="getStatus(item.status)">
                     </td>

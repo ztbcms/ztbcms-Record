@@ -39,7 +39,10 @@ class RecordService extends BaseService {
             'status' => $record->getStatus(),
             'create_time' => $now,
             'update_time' => $now,
-            'remark' => $record->getRemark()
+            'remark' => $record->getRemark(),
+            'to_name' => $record->getToName(),
+            'from_name' => $record->getFromName(),
+            'target_name' => $record->getTargetName(),
         ];
         $result = M($record->table_name)->add($data);
         if ($result) {

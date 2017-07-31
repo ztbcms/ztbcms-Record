@@ -5,11 +5,14 @@ abstract class Record {
     public $table_name = 'RecordTrade';
 
     protected $to = 0;
-    protected $to_type = 'member';
+    protected $to_type = '';
+    protected $to_name = '';
     protected $from = 0;
-    protected $from_type = 'member';
+    protected $from_type = '';
+    protected $from_name = '';
     protected $target = 0;
     protected $target_type = '';
+    protected $target_name = '';
     protected $income = 0;
     protected $pay = 0;
     protected $balance = 0;
@@ -184,6 +187,48 @@ abstract class Record {
      */
     public function getRemark() {
         return $this->remark;
+    }
+
+    /**
+     * @return string
+     */
+    public function getToName() {
+        return $this->to_name;
+    }
+
+    /**
+     * @param string $to_name
+     */
+    public function setToName(string $to_name) {
+        $this->to_name = $to_name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFromName() {
+        return $this->from_name;
+    }
+
+    /**
+     * @param string $from_name
+     */
+    public function setFromName(string $from_name) {
+        $this->from_name = $from_name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTargetName() {
+        return $this->target_name;
+    }
+
+    /**
+     * @param string $target_name
+     */
+    public function setTargetName(string $target_name) {
+        $this->target_name = $target_name;
     }
 
 
