@@ -5,11 +5,11 @@ DROP TABLE IF EXISTS `cms_record_trade`;
 CREATE TABLE `cms_record_trade` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT '上一条记录id，方便排除错误记录',
-  `to` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流入者',
-  `to_type` varchar(255) NOT NULL DEFAULT 'member' COMMENT '记录流入者者类型',
-  `from` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流出者',
-  `from_type` varchar(255) NOT NULL DEFAULT 'member' COMMENT '记录流出者类型',
-  `target` varchar(255) NOT NULL DEFAULT '' COMMENT '记录来源者',
+  `to` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流入者,一般为唯一ID',
+  `to_type` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流入者者类型',
+  `from` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流出者,一般为唯一ID',
+  `from_type` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流出者类型',
+  `target` varchar(255) NOT NULL DEFAULT '' COMMENT '记录来源者,一般为唯一ID',
   `target_type` varchar(255) NOT NULL DEFAULT '' COMMENT '记录来源者类型',
   `income` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '收入',
   `pay` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '支出',
@@ -22,7 +22,9 @@ CREATE TABLE `cms_record_trade` (
   `to_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录流入者名称',
   `from_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录流出者名称',
   `target_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录来源名称',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `to` (`to`(191)),
+  KEY `from` (`from`(191))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- ----------------------------
 -- 积分记录表
@@ -31,11 +33,11 @@ DROP TABLE IF EXISTS `cms_record_integral`;
 CREATE TABLE `cms_record_integral` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT '上一条记录id，方便排除错误记录',
-  `to` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流入者',
-  `to_type` varchar(255) NOT NULL DEFAULT 'member' COMMENT '记录流入者者类型',
-  `from` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流出者',
-  `from_type` varchar(255) NOT NULL DEFAULT 'member' COMMENT '记录流出者类型',
-  `target` varchar(255) NOT NULL DEFAULT '' COMMENT '记录来源者',
+  `to` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流入者,一般为唯一ID',
+  `to_type` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流入者者类型',
+  `from` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流出者,一般为唯一ID',
+  `from_type` varchar(255) NOT NULL DEFAULT '' COMMENT '记录流出者类型',
+  `target` varchar(255) NOT NULL DEFAULT '' COMMENT '记录来源者,一般为唯一ID',
   `target_type` varchar(255) NOT NULL DEFAULT '' COMMENT '记录来源者类型',
   `income` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '收入',
   `pay` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '支出',
@@ -48,5 +50,7 @@ CREATE TABLE `cms_record_integral` (
   `to_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录流入者名称',
   `from_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录流出者名称',
   `target_name` varchar(64) NOT NULL DEFAULT '' COMMENT '记录来源名称',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `to` (`to`(191)),
+  KEY `from` (`from`(191))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
