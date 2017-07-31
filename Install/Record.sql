@@ -20,7 +20,7 @@ CREATE TABLE `cms_record_trade` (
   `update_time` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间戳',
   `remark` varchar(255) NOT NULL DEFAULT '' COMMENT '备注信息',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 -- ----------------------------
 -- 积分记录表
 -- ----------------------------
@@ -43,4 +43,4 @@ CREATE TABLE `cms_record_integral` (
   `update_time` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间戳',
   `remark` varchar(255) NOT NULL DEFAULT '' COMMENT '备注信息',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
