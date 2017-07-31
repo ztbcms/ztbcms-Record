@@ -22,6 +22,8 @@ class RecordService extends BaseService {
         $Model->startTrans();
 
         $balance = $last_vaild_balance + $record->getIncome() - $record->getPay();
+
+        $now = time();
         $data = [
             'parent_id' => $last_vaild_record ? $last_vaild_record['id'] : 0,
             'to' => $record->getTo(),
@@ -35,7 +37,8 @@ class RecordService extends BaseService {
             'balance' => $balance,//计算当前记录的余额
             'detail' => $record->getDetail(),
             'status' => $record->getStatus(),
-            'create_time' => time(),
+            'create_time' => $now,
+            'update_time' => $now,
             'remark' => $record->getRemark()
         ];
         $result = M($record->table_name)->add($data);

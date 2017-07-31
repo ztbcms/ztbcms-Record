@@ -108,6 +108,9 @@
             },
             filters: {
                 getFormatTime: function (value) {
+                    if(value == 0 || value == ''){
+                        return '';
+                    }
                     var time = new Date(parseInt(value * 1000));
                     var y = time.getFullYear();
                     var m = time.getMonth() + 1;
