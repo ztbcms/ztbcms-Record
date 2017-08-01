@@ -45,19 +45,12 @@
                     </td>
                     <td align="center">
                         {{ item.target_name }}
-                        <p>{{ item.target_type }}</p>
                     </td>
                     <td align="center">
                         {{ item.from_name }}
-                        <p>
-                            {{ item.from_type }}
-                        </p>
                     </td>
                     <td align="center">
                         {{ item.to_name }}
-                        <p>
-                            {{ item.to_type }}
-                        </p>
                     </td>
                     <td align="center">{{ item.detail }}</td>
                     <td align="center">{{ item.income }}</td>
