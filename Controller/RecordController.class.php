@@ -27,11 +27,11 @@ class RecordController extends AdminBase {
         $lists = M($tabName)->where($where)->order($order)->page($page, $limit)->select();
         $total = M($tabName)->where($where)->count();
         $data = [
-            'lists' => $lists ? $lists : [],
+            'items' => $lists ? $lists : [],
             'limit' => $limit,
             'page' => $page,
-            'total' => $total,
-            'page_count' => ceil($total / $limit),
+            'total_items' => $total,
+            'total_pages' => ceil($total / $limit),
         ];
 
         $this->ajaxReturn(self::createReturn(true, $data));

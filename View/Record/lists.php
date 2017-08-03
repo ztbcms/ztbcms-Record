@@ -127,11 +127,11 @@
                         type: 'post',
                         success: function (res) {
                             var data = res.data;
-                            that.lists = data.lists;
+                            that.lists = data.items;
                             that.page = data.page;
                             that.temp_page = data.page;
                             that.limit = data.limit;
-                            that.page_count = data.page_count;
+                            that.page_count = data.total_pages;
                         }
                     })
                 },
