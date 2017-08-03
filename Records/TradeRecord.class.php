@@ -14,7 +14,7 @@ class TradeRecord extends Record {
      * @param $target_type
      * @param $target
      */
-    public function __construct($to, $to_name, $target_type, $target) {
+    public function __construct($to = '', $to_name = '', $target_type = '', $target = '') {
         $this->setTo($to);
         $this->setToName($to_name);
         $this->setTargetType($target_type);
