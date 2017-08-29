@@ -15,7 +15,7 @@ class IntegralRecord extends Record {
      * @param $target_type
      * @param $target_name
      */
-    public function __construct($to, $to_name,  $target, $target_type, $target_name) {
+    public function __construct($to, $to_name,  $target, $target_type = '', $target_name = '') {
         $this->setTo($to);
         $this->setToName($to_name);
 
