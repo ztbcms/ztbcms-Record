@@ -44,13 +44,16 @@
                         {{ item.id }}
                     </td>
                     <td align="center">
-                        {{ item.target_name }}
+                        <strong>{{ item.target }}</strong>
+                        <p>{{ item.target_type }}</p>
                     </td>
                     <td align="center">
-                        {{ item.from_name }}
+                        <strong>{{ item.from }}</strong>
+                        <p>{{ item.from_type }}</p>
                     </td>
                     <td align="center">
-                        {{ item.to_name }}
+                        <strong>{{ item.to }}</strong>
+                        <p>{{ item.to_type }}</p>
                     </td>
                     <td align="center">{{ item.detail }}</td>
                     <td align="center">{{ item.income }}</td>
@@ -72,7 +75,10 @@
                         <a href="javascript:;">{{ page }} / {{ page_count }}</a>
                     </li>
                     <li><a @click="page<page_count ? page++ : '' ;getList()" href="javascript:;">下一页</a></li>
-                    <input type="number" min="1" :max="page_count" v-model="temp_page" style="width:50px;margin-left: 50px;;margin-right: 5px"><a class="btn btn-info" @click="toPage()" href="javascript:;">GO</a>
+                    <input type="number" min="1" :max="page_count" v-model="temp_page"
+                           style="width:50px;margin-left: 50px;;margin-right: 5px"><a class="btn btn-info"
+                                                                                      @click="toPage()"
+                                                                                      href="javascript:;">GO</a>
                 </ul>
             </div>
         </div>
@@ -97,7 +103,7 @@
             },
             filters: {
                 getFormatTime: function (value) {
-                    if(value == 0 || value == ''){
+                    if (value == 0 || value == '') {
                         return '';
                     }
                     var time = new Date(parseInt(value * 1000));
@@ -135,9 +141,9 @@
                         }
                     })
                 },
-                getStatus: function(value){
+                getStatus: function (value) {
                     var name = '';
-                    switch (value){
+                    switch (value) {
                         case '0':
                             name = '<span class="label label-success">正常</span>';
                             break;
@@ -151,8 +157,8 @@
                     return name;
                 },
                 toPage: function () {
-                    if (this.temp_page < 1)  this.temp_page = 1;
-                    if (this.temp_page > this.page_count)  this.temp_page = this.page_count;
+                    if (this.temp_page < 1) this.temp_page = 1;
+                    if (this.temp_page > this.page_count) this.temp_page = this.page_count;
 
                     this.page = this.temp_page;
                     this.getList();
