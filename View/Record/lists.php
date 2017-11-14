@@ -6,7 +6,7 @@
         color: #999999;
     }
 </style>
-<div id="app">
+<div id="app" v-cloak>
     <div class="h_a">搜索</div>
     <div>
         <div class="search_type cc mb10">
